@@ -14,8 +14,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
 
-
-
+    
+    @IBAction func toChariot(_ sender: AnyObject){
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "chariotSCNView") as? chariotSCNView{
+            vc.isChariot = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @IBAction func toPyramid(_ sender: AnyObject){
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "chariotSCNView") as? chariotSCNView{
+            vc.isChariot = false
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 

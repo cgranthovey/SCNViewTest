@@ -13,30 +13,49 @@
         <!--View Controller-->
         <scene sceneID="1wy-BI-pEt">
             <objects>
-                <viewController id="L4s-2I-7Da" sceneMemberID="viewController">
+                <viewController id="L4s-2I-7Da" customClass="ViewController" customModule="SCNViewTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ALT-cA-OoT">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-2j-H7d">
-                                <rect key="frame" x="447" y="319" width="130" height="130"/>
-                                <color key="backgroundColor" red="0.88056278228759766" green="0.2176782349136136" blue="0.20066837920553449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="fm2-TS-Upx"/>
-                                    <constraint firstAttribute="width" constant="130" id="q7U-Cq-Miw"/>
-                                </constraints>
-                                <state key="normal" title="Show Chariot">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="WGF-ko-VUB" kind="show" id="AAf-Do-tbT"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hny-uM-fBY">
+                                <rect key="frame" x="447" y="244" width="130" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-2j-H7d">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <color key="backgroundColor" red="0.88056278228759766" green="0.2176782349136136" blue="0.20066837920553449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="fm2-TS-Upx"/>
+                                            <constraint firstAttribute="width" constant="130" id="q7U-Cq-Miw"/>
+                                        </constraints>
+                                        <state key="normal" title="Show Chariot">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toChariot:" destination="L4s-2I-7Da" eventType="touchUpInside" id="jfg-5Y-OOY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d7-Zo-3ij">
+                                        <rect key="frame" x="0.0" y="150" width="130" height="130"/>
+                                        <color key="backgroundColor" red="0.23702686656752592" green="0.29697511314016234" blue="0.88056278229999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="3Hg-Iu-eFu"/>
+                                            <constraint firstAttribute="width" constant="130" id="3Ob-cR-h23"/>
+                                        </constraints>
+                                        <state key="normal" title="Show Pyramid">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toPyramid:" destination="L4s-2I-7Da" eventType="touchUpInside" id="CMo-Wh-MKD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DNn-2j-H7d" firstAttribute="centerY" secondItem="ALT-cA-OoT" secondAttribute="centerY" id="Z8N-Ty-quO"/>
-                            <constraint firstItem="DNn-2j-H7d" firstAttribute="centerX" secondItem="ALT-cA-OoT" secondAttribute="centerX" id="bnQ-J7-X4o"/>
+                            <constraint firstItem="hny-uM-fBY" firstAttribute="centerX" secondItem="ALT-cA-OoT" secondAttribute="centerX" id="AkI-KX-9X1"/>
+                            <constraint firstItem="hny-uM-fBY" firstAttribute="centerY" secondItem="ALT-cA-OoT" secondAttribute="centerY" id="fox-fk-gq9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hJn-Py-HMG"/>
                     </view>
@@ -44,12 +63,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8l2-aI-QAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="-795"/>
+            <point key="canvasLocation" x="25.78125" y="-795.3125"/>
         </scene>
         <!--ChariotSCN View-->
         <scene sceneID="Oo3-Aa-J48">
             <objects>
-                <viewController id="WGF-ko-VUB" customClass="chariotSCNView" customModule="SCNViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chariotSCNView" id="WGF-ko-VUB" customClass="chariotSCNView" customModule="SCNViewTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yLw-9V-B0G">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -103,8 +103,8 @@
 			children = (
 				1556070F1FD0B6E5007B911D /* AppDelegate.swift */,
 				155607111FD0B6E5007B911D /* ViewController.swift */,
-				1556073F1FD0B82D007B911D /* chariot.obj */,
 				1556073D1FD0B7CF007B911D /* chariotSCNView.swift */,
+				1556073F1FD0B82D007B911D /* chariot.obj */,
 				155607131FD0B6E5007B911D /* Main.storyboard */,
 				155607161FD0B6E5007B911D /* Assets.xcassets */,
 				155607181FD0B6E5007B911D /* LaunchScreen.storyboard */,
